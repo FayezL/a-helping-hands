@@ -15,9 +15,7 @@
   <a href="#features">Features</a> &nbsp;·&nbsp;
   <a href="#tech-stack">Tech Stack</a> &nbsp;·&nbsp;
   <a href="#getting-started">Getting Started</a>
-</p>
-
-<p align="center">
+  <br />
   <img src="public/hero-section.png" alt="Helping Hands hero" width="520" />
 </p>
 
