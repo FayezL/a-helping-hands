@@ -1,36 +1,25 @@
 <p align="center">
-  <img src="public/logo.png" alt="Helping Hands logo" width="120" />
-</p>
-
-<h1 align="center">Helping Hands</h1>
-
-<p align="center">
-  <em>Ariel's Cleaning — a full-stack website for a family-owned house cleaning service in North County San Diego.</em>
-</p>
-
-<p align="center">
-  <a href="https://helping-hands-55c3a.web.app"><strong> Live Demo </strong></a>
-  &nbsp;&middot;&nbsp;
-  <a href="#-features">Features</a>
-  &nbsp;&middot;&nbsp;
-  <a href="#-tech-stack">Tech Stack</a>
-  &nbsp;&middot;&nbsp;
-  <a href="#-getting-started">Getting Started</a>
-</p>
-
-<p align="center">
-  <a href="https://helping-hands-55c3a.web.app"><img alt="Live Demo" src="https://img.shields.io/badge/Live_Demo-helping--hands--55c3a.web.app-22c55e?style=flat&logo=firebase&logoColor=white" /></a>
+  <img src="public/logo.png" alt="Helping Hands" width="64" />
+  <br />
+  <strong>Helping Hands</strong> &middot; <em>Ariel's Cleaning — house cleaning in North County San Diego</em>
+  <br />
+  <a href="https://helping-hands-55c3a.web.app"><img alt="Live Demo" src="https://img.shields.io/badge/Live_Demo-22c55e?style=flat&logo=firebase&logoColor=white" /></a>
   <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16-000000?style=flat&logo=next.js&logoColor=white" />
   <img alt="React" src="https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&logoColor=black" />
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat&logo=typescript&logoColor=white" />
   <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat&logo=tailwindcss&logoColor=white" />
   <img alt="Firebase" src="https://img.shields.io/badge/Firebase-12-FFCA28?style=flat&logo=firebase&logoColor=black" />
   <img alt="License" src="https://img.shields.io/badge/License-MIT-blue?style=flat" />
+  <br />
+  <a href="https://helping-hands-55c3a.web.app"><strong>Live Demo</strong></a> &nbsp;·&nbsp;
+  <a href="#features">Features</a> &nbsp;·&nbsp;
+  <a href="#tech-stack">Tech Stack</a> &nbsp;·&nbsp;
+  <a href="#getting-started">Getting Started</a>
 </p>
 
-<hr />
-
-![Helping Hands hero](public/hero-section.png)
+<p align="center">
+  <img src="public/hero-section.png" alt="Helping Hands hero" width="520" />
+</p>
 
 ## About
 
