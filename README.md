@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/logo.png" alt="Helping Hands" width="64" />
+  <img src="public/logo.png" alt="Helping Hands" width="40" />
   <br />
   <strong>Helping Hands</strong> &middot; <em>Ariel's Cleaning — house cleaning in North County San Diego</em>
   <br />
