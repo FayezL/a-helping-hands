@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="public/logo.png" alt="Helping Hands" width="40" />
+  <img src="public/logo.png" alt="A Helping Hands" width="40" />
   <br />
-  <strong>Helping Hands</strong> &middot; <em>Ariel's Cleaning — house cleaning in North County San Diego</em>
+  <strong>A Helping Hands</strong> &middot; <em>Ariel's Cleaning — house cleaning in North County San Diego</em>
   <br />
   <a href="https://helping-hands-55c3a.web.app"><img alt="Live Demo" src="https://img.shields.io/badge/Live_Demo-22c55e?style=flat&logo=firebase&logoColor=white" /></a>
   <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16-000000?style=flat&logo=next.js&logoColor=white" />
@@ -16,12 +16,12 @@
   <a href="#tech-stack">Tech Stack</a> &nbsp;·&nbsp;
   <a href="#getting-started">Getting Started</a>
   <br />
-  <img src="public/hero-section.png" alt="Helping Hands hero" width="520" />
+  <img src="public/hero-section.png" alt="A Helping Hands hero" width="520" />
 </p>
 
 ## About
 
-**Helping Hands** is a production-style marketing site and booking system built for **Ariel's Cleaning**, a family-owned house cleaning business serving North County San Diego. Visitors can browse services, read testimonials, and submit booking requests and contact messages — all of which flow into a secure, auth-protected admin dashboard where the business owner manages leads and site settings.
+**A Helping Hands** is a production-style marketing site and booking system built for **Ariel's Cleaning**, a family-owned house cleaning business serving North County San Diego. Visitors can browse services, read testimonials, and submit booking requests and contact messages — all of which flow into a secure, auth-protected admin dashboard where the business owner manages leads and site settings.
 
 It's built with the **Next.js App Router**, **React 19**, and **Firebase**, with a custom design system, animated landing sections, and end-to-end form validation.
 
@@ -127,8 +127,8 @@ match /settings/{id} {
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/FayezL/helping-hands.git
-cd helping-hands
+git clone https://github.com/FayezL/a-helping-hands.git
+cd a-helping-hands
 
 # 2. Install dependencies
 npm install
