@@ -6,6 +6,8 @@ import type { BookingRequest, BookingStatus } from "@/types";
 import AdminGuard from "@/components/admin/AdminGuard";
 import BookingTable from "@/components/admin/BookingTable";
 import BookingDetail from "@/components/admin/BookingDetail";
+import CreateBookingModal from "@/components/admin/CreateBookingModal";
+import Button from "@/components/ui/Button";
 
 function StatCard({ label, count, color }: { label: string; count: number; color: string }) {
   return (
@@ -20,6 +22,7 @@ export default function AdminDashboardClient() {
   const [bookings, setBookings] = useState<BookingRequest[]>([]);
   const [selectedBooking, setSelectedBooking] = useState<BookingRequest | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showCreateModal, setShowCreateModal] = useState(false);
 
   const fetchBookings = async () => {
     try {
@@ -48,6 +51,11 @@ export default function AdminDashboardClient() {
     await fetchBookings();
   };
 
+  const handleCreated = async () => {
+    setShowCreateModal(false);
+    await fetchBookings();
+  };
+
   const totalCount = bookings.length;
   const newCount = bookings.filter((b) => b.status === "new").length;
   const scheduledCount = bookings.filter((b) => b.status === "scheduled").length;
@@ -56,7 +64,12 @@ export default function AdminDashboardClient() {
   return (
     <AdminGuard>
       <div>
-        <h2 className="text-xl font-bold text-gray-900 mb-6">Bookings</h2>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-xl font-bold text-gray-900">Bookings</h2>
+          <Button variant="primary" size="sm" onClick={() => setShowCreateModal(true)}>
+            + New Booking
+          </Button>
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <StatCard label="Total" count={totalCount} color="text-gray-900" />
@@ -85,6 +98,13 @@ export default function AdminDashboardClient() {
             onClose={() => setSelectedBooking(null)}
             onStatusChange={handleStatusChange}
             onDelete={handleDelete}
+          />
+        )}
+
+        {showCreateModal && (
+          <CreateBookingModal
+            onClose={() => setShowCreateModal(false)}
+            onCreated={handleCreated}
           />
         )}
       </div>
