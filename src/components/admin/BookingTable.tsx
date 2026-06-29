@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from "react";
-import type { BookingRequest, BookingStatus } from "@/types";
+import type { BookingRequest, BookingStatus, BookingSource } from "@/types";
+import { BOOKING_SOURCES } from "@/data/constants";
 import Badge from "@/components/ui/Badge";
+import SourceBadge from "@/components/ui/SourceBadge";
 
 interface BookingTableProps {
   bookings: BookingRequest[];
@@ -28,12 +30,17 @@ function formatDate(date: Date): string {
 
 export default function BookingTable({ bookings, onSelect, selectedId }: BookingTableProps) {
   const [filter, setFilter] = useState<BookingStatus | "all">("all");
+  const [sourceFilter, setSourceFilter] = useState<BookingSource | "all">("all");
 
-  const filtered = filter === "all" ? bookings : bookings.filter((b) => b.status === filter);
+  const filtered = bookings.filter((b) => {
+    const matchesStatus = filter === "all" || b.status === filter;
+    const matchesSource = sourceFilter === "all" || b.source === sourceFilter;
+    return matchesStatus && matchesSource;
+  });
 
   return (
     <div>
-      <div className="mb-4">
+      <div className="mb-4 flex flex-wrap gap-3">
         <select
           value={filter}
           onChange={(e) => setFilter(e.target.value as BookingStatus | "all")}
@@ -45,6 +52,18 @@ export default function BookingTable({ bookings, onSelect, selectedId }: Booking
             </option>
           ))}
         </select>
+        <select
+          value={sourceFilter}
+          onChange={(e) => setSourceFilter(e.target.value as BookingSource | "all")}
+          className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+        >
+          <option value="all">All sources</option>
+          {BOOKING_SOURCES.map((s) => (
+            <option key={s} value={s}>
+              {s}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="hidden md:block">
@@ -53,6 +72,7 @@ export default function BookingTable({ bookings, onSelect, selectedId }: Booking
             <tr className="border-b border-gray-200 text-left text-sm font-medium text-gray-500">
               <th className="pb-3 pr-4">Name</th>
               <th className="pb-3 pr-4">Service</th>
+              <th className="pb-3 pr-4">Source</th>
               <th className="pb-3 pr-4">Date</th>
               <th className="pb-3 pr-4">Status</th>
               <th className="pb-3">Submitted</th>
@@ -67,6 +87,7 @@ export default function BookingTable({ bookings, onSelect, selectedId }: Booking
               >
                 <td className="py-3 pr-4 text-sm font-medium text-gray-900">{booking.fullName}</td>
                 <td className="py-3 pr-4 text-sm text-gray-600">{booking.serviceType}</td>
+                <td className="py-3 pr-4"><SourceBadge source={booking.source} /></td>
                 <td className="py-3 pr-4 text-sm text-gray-600">{formatDate(new Date(booking.preferredDate))}</td>
                 <td className="py-3 pr-4">
                   <Badge status={booking.status} />
@@ -76,7 +97,7 @@ export default function BookingTable({ bookings, onSelect, selectedId }: Booking
             ))}
             {filtered.length === 0 && (
               <tr>
-                <td colSpan={5} className="py-8 text-center text-sm text-gray-500">
+                <td colSpan={6} className="py-8 text-center text-sm text-gray-500">
                   No bookings found
                 </td>
               </tr>
@@ -98,6 +119,7 @@ export default function BookingTable({ bookings, onSelect, selectedId }: Booking
             </div>
             <div className="space-y-1 text-sm text-gray-600">
               <p>{booking.serviceType}</p>
+              <p><SourceBadge source={booking.source} /></p>
               <p>Date: {formatDate(new Date(booking.preferredDate))}</p>
               <p>Submitted: {formatDate(booking.createdAt)}</p>
             </div>
