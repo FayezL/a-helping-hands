@@ -8,7 +8,7 @@ export const BUSINESS_EMAIL = "hello@a-helping-hands.org";
 export const BUSINESS_SERVICE_AREA =
   "Proudly serving North County San Diego — including Carlsbad, Encinitas, Oceanside, Vista, San Marcos, Escondido, Cardiff, Solana Beach, and surrounding communities. Contact us to confirm availability in your neighborhood.";
 export const BUSINESS_HOURS =
-  "Monday – Friday: 8:00 AM – 6:00 PM | Saturday: 9:00 AM – 3:00 PM | Sunday: Closed";
+  "Monday – Saturday: 8:00 AM – 4:00 PM (Pacific Time) | Sunday: Closed";
 
 export const SERVICE_TYPES = [
   "Weekly Cleaning",
