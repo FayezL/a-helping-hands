@@ -71,3 +71,21 @@ export interface Testimonial {
   rating: number;
   location: string;
 }
+
+export interface YelpReviewSnippet {
+  id: string;
+  author: string;
+  rating: number;
+  text: string;
+  date: string;
+  url: string;
+}
+
+export interface YelpReviewData {
+  businessName: string;
+  rating: number | null;
+  reviewCount: number;
+  yelpUrl: string;
+  lastUpdated: string;
+  reviews: YelpReviewSnippet[];
+}
