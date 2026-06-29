@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import type { BookingRequest, BookingStatus } from "@/types";
 import Badge from "@/components/ui/Badge";
+import SourceBadge from "@/components/ui/SourceBadge";
 
 interface BookingDetailProps {
   booking: BookingRequest;
@@ -62,6 +63,11 @@ export default function BookingDetail({ booking, onClose, onStatusChange, onDele
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium text-gray-500">Status</span>
                 <Badge status={booking.status} />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-500">Source</span>
+                <SourceBadge source={booking.source} />
               </div>
 
               <div>
