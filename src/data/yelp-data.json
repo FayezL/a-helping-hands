@@ -1,8 +1,33 @@
 {
   "businessName": "A Helping Hand",
-  "rating": null,
-  "reviewCount": 0,
+  "rating": 5.0,
+  "reviewCount": 3,
   "yelpUrl": "https://www.yelp.com/biz/a-helping-hand-vista",
   "lastUpdated": "2026-06-29T00:00:00.000Z",
-  "reviews": []
+  "reviews": [
+    {
+      "id": "karina-e",
+      "author": "Karina E.",
+      "rating": 5,
+      "text": "YOU NEED THEM!!!! When I tell u my house was as if a tornado pass by. That's exactly what it was. Im a mom of a child on the spectrum that has speech therapy 2 to 3 times a week. And also a 15mon old. So my house tends to take the backseat to it all. These ladies came in and took it head on. I do t think my house has ever been soo clean. They literally made all my appliances, look brand new. I am 1000% grateful for A Helping Hand. They are very respectful fast working professional and I highly recommend them.",
+      "date": "2025-08-12",
+      "url": "https://www.yelp.com/biz/a-helping-hand-vista"
+    },
+    {
+      "id": "anton-p",
+      "author": "Anton P.",
+      "rating": 5,
+      "text": "Fantastic work. We've hired a few cleaning services in the past. Ariel and her team were head and shoulders above what we've experienced before. Incredibly professional and friendly. The attention to detail, though is why we decided to sign up for a monthly plan. Thanks again so much!",
+      "date": "2025-05-06",
+      "url": "https://www.yelp.com/biz/a-helping-hand-vista"
+    },
+    {
+      "id": "andrea-s",
+      "author": "Andrea S.",
+      "rating": 5,
+      "text": "Ariel and her team do an amazing job on both my house and my dad's! They are all very kind and hard workers. I recommend them to everyone I know!",
+      "date": "2025-05-06",
+      "url": "https://www.yelp.com/biz/a-helping-hand-vista"
+    }
+  ]
 }
