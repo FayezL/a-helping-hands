@@ -36,6 +36,7 @@ export default function BookingForm({ defaultServiceType }: BookingFormProps) {
       bathrooms: 0,
       preferredDate: "",
       notes: "",
+      source: "Website",
     },
   });
 

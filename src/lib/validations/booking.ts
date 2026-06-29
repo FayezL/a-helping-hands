@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { BOOKING_SOURCES } from "@/data/constants";
 
 export const bookingSchema = z.object({
   fullName: z.string().min(2, "Full name is required"),
@@ -21,6 +22,7 @@ export const bookingSchema = z.object({
   bathrooms: z.coerce.number().min(0, "Must be 0 or more"),
   preferredDate: z.string().min(1, "Please select a preferred date"),
   notes: z.string().optional().default(""),
+  source: z.enum([...BOOKING_SOURCES]).default("Website"),
 });
 
 export type BookingFormValues = z.infer<typeof bookingSchema>;

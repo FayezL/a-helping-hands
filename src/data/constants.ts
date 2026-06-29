@@ -20,6 +20,16 @@ export const SERVICE_TYPES = [
   "Eco-Friendly Cleaning",
 ] as const;
 
+export const BOOKING_SOURCES = [
+  "Website",
+  "Phone Call",
+  "Email",
+  "Walk-in",
+  "Referral",
+  "Social Media",
+  "Other",
+] as const;
+
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },

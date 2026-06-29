@@ -28,6 +28,7 @@ function mapBooking(docSnap: QueryDocumentSnapshot): BookingRequest {
     preferredDate: data.preferredDate,
     notes: data.notes || "",
     status: data.status,
+    source: data.source ?? "Website",
     createdAt: data.createdAt?.toDate() || new Date(),
   };
 }

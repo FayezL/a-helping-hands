@@ -1,4 +1,8 @@
+import { BOOKING_SOURCES } from "@/data/constants";
+
 export type BookingStatus = "new" | "contacted" | "scheduled" | "completed";
+
+export type BookingSource = (typeof BOOKING_SOURCES)[number];
 
 export interface BookingRequest {
   id: string;
@@ -12,6 +16,7 @@ export interface BookingRequest {
   preferredDate: string;
   notes: string;
   status: BookingStatus;
+  source: BookingSource;
   createdAt: Date;
 }
 
@@ -25,6 +30,7 @@ export interface BookingFormData {
   bathrooms: number;
   preferredDate: string;
   notes: string;
+  source: BookingSource;
 }
 
 export interface ContactMessage {
