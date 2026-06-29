@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Great_Vibes, Playfair_Display, Poppins } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import "./globals.css";
 
 const greatVibes = Great_Vibes({
@@ -23,7 +24,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://helping-hands-55c3a.web.app"),
+  metadataBase: new URL("https://a-helping-hands.org"),
   title: {
     default: "Ariel's Cleaning | Professional House Cleaning in North County San Diego",
     template: "%s | Ariel's Cleaning",
@@ -64,6 +65,7 @@ export default function RootLayout({
       className={`${greatVibes.variable} ${playfair.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-foreground">
+        <GoogleAnalytics />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
