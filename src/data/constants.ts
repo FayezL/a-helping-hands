@@ -4,7 +4,7 @@ export const BUSINESS_TAGLINE = "A Family-Owned Cleaning Service";
 
 export const BUSINESS_PHONE = "(760) 555-0142";
 export const BUSINESS_PHONE_RAW = "+17605550142";
-export const BUSINESS_EMAIL = "hello@arielscleaning.com";
+export const BUSINESS_EMAIL = "hello@a-helping-hands.org";
 export const BUSINESS_SERVICE_AREA =
   "Proudly serving North County San Diego — including Carlsbad, Encinitas, Oceanside, Vista, San Marcos, Escondido, Cardiff, Solana Beach, and surrounding communities. Contact us to confirm availability in your neighborhood.";
 export const BUSINESS_HOURS =
