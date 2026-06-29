@@ -64,14 +64,6 @@ export interface Service {
   icon: string;
 }
 
-export interface Testimonial {
-  id: string;
-  name: string;
-  quote: string;
-  rating: number;
-  location: string;
-}
-
 export interface YelpReviewSnippet {
   id: string;
   author: string;
